@@ -49,7 +49,7 @@ def rebuildImg(bitImags, build_list, img):
                 new_img[i, j] += bitImags[i, j, 7-m] * (2 ** (m))
     return new_img
 
-def showRebuildimgimg(rebuildImag,img):
+def showRebuildimg(rebuildImag,img):
     plt.figure(figsize=(100, 20))
     plt.subplot(121)
     plt.axis('off')
@@ -64,5 +64,5 @@ if __name__ == '__main__':
     bit_imgs=getBitlayer(img)
     showBitlayer(bit_imgs)
     rebuildImg=rebuildImg(bit_imgs,[5,6,7],img)
-    showRebuildimgimg(rebuildImg,img)
+    showRebuildimg(rebuildImg,img)
 
