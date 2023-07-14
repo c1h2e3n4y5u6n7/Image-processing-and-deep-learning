@@ -49,7 +49,7 @@ def grayByWeightedaverage(img):
 
 
 if __name__ == '__main__':
-    img = cv2.imread('miao.jpg')
+    img = cv2.imread('originImg/miao.jpg')
     opencv_gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     grayByaverage=grayByaverage(img)
     grayBymax=grayBymax(img)

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 #读取原始图像
-img = cv2.imread('miao.jpg')
+img = cv2.imread('originImg/miao.jpg')
 #获取图像高度和宽度
 height = img.shape[0]
 width = img.shape[1]

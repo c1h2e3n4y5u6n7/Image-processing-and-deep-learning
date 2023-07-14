@@ -45,7 +45,7 @@ def gauss_noise(img, mean=0, sigma=25):
     return res_img
 
 
-img = cv2.imread('PeppersRGB.tif')
+img = cv2.imread('originImg/PeppersRGB.tif')
 grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 noiseImg=gauss_noise(grayImg)
 smoothImg = gaussianSmooth(grayImg)

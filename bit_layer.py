@@ -60,7 +60,7 @@ def showRebuildimg(rebuildImag,img):
     plt.show()
 
 if __name__ == '__main__':
-    img = cv2.imread(r'dollars.tif', 0)
+    img = cv2.imread(r'originImg/dollars.tif', 0)
     bit_imgs=getBitlayer(img)
     showBitlayer(bit_imgs)
     rebuildImg=rebuildImg(bit_imgs,[5,6,7],img)
