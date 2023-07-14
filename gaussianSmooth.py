@@ -17,8 +17,7 @@ def gaussianSmooth(img_gray):
     gaussian = np.zeros([5, 5])
     for i in range(5):
         for j in range(5):
-            gaussian[i, j] = math.exp((-1 / (2 * sigma * sigma)) * (np.square(i - 3) + np.square(j - 3))) / (
-                    2 * math.pi * sigma * sigma)
+            gaussian[i, j] = math.exp((-1 / (2 * sigma * sigma)) * (np.square(i - 2) + np.square(j - 2)))
             gau_sum = gau_sum + gaussian[i, j]
     # 2.高斯滤波器归一化处理
     gaussian = gaussian / gau_sum
@@ -49,7 +48,7 @@ def gauss_noise(img, mean=0, sigma=25):
 img = cv2.imread('PeppersRGB.tif')
 grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 noiseImg=gauss_noise(grayImg)
-smoothImg = gaussianSmooth(noiseImg)
+smoothImg = gaussianSmooth(grayImg)
 iS.showImagegray(smoothImg, noiseImg, 25, 15, 'smoothImg', 'origin', './GaussianSmooth.jpg')
 GaussianBlur_opencv=cv2.GaussianBlur(noiseImg,(5,5),25)
 iS.showImagegray(GaussianBlur_opencv,noiseImg , 25, 15, 'GaussianBlur_opencv', 'origin', './GaussianSmooth_Opencv.jpg')
