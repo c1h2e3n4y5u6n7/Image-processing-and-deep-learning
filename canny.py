@@ -136,6 +136,7 @@ def double_threshold(nms, threshold1, threshold2):
     Returns:
         The binary image.
     """
+
     visited = np.zeros_like(nms)
     output_image = nms.copy()
     W, H = output_image.shape
